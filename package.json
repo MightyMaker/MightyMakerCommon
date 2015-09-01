@@ -1,0 +1,22 @@
+{
+  "name": "MightyMakerCommon",
+  "version": "0.0.0",
+  "description": "MightyMaker common site assets.",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MightyMaker/MightyMakerCommon.git"
+  },
+  "keywords": [
+    "mightymaker"
+  ],
+  "author": "riaanpelser@gmx.com",
+  "license": "Private",
+  "bugs": {
+    "url": "https://github.com/MightyMaker/MightyMakerCommon/issues"
+  },
+  "homepage": "https://github.com/MightyMaker/MightyMakerCommon"
+}
