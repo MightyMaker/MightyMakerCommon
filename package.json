@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/MightyMaker/MightyMakerCommon/issues"
   },
-  "homepage": "https://github.com/MightyMaker/MightyMakerCommon"
+  "homepage": "https://github.com/MightyMaker/MightyMakerCommon",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.0.4"
+  }
 }
