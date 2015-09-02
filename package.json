@@ -1,24 +1,24 @@
 {
-  "name": "MightyMakerCommon",
+  "name": "MightyMakerPrime47",
   "version": "0.0.0",
-  "description": "MightyMaker common site assets.",
+  "description": "MightyMaker website style assets.",
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/MightyMaker/MightyMakerCommon.git"
+    "url": "https://github.com/MightyMaker/MightyMakerPrime47.git"
   },
   "keywords": [
-    "mightymaker"
+    "mightymaker", "prime47"
   ],
   "author": "riaanpelser@gmx.com",
   "license": "Private",
   "bugs": {
-    "url": "https://github.com/MightyMaker/MightyMakerCommon/issues"
+    "url": "https://github.com/MightyMaker/MightyMakerPrime47/issues"
   },
-  "homepage": "https://github.com/MightyMaker/MightyMakerCommon",
+  "homepage": "https://github.com/MightyMaker/MightyMakerPrime47",
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-sass": "^2.0.4"
