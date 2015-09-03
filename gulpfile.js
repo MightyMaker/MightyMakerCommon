@@ -16,7 +16,8 @@ gulp.task("css", ["sass"], function()
         .pipe(css())
         .pipe(rename(function(path)
         {
-            path.basename += ".min";
+            if (path.basename.indexOf(".min") < 0)
+                path.basename += ".min";
         }))
         .pipe(gulp.dest(paths.css));
 });
