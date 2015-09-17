@@ -1,5 +1,6 @@
 var gulp = require("gulp");
 var css = require("gulp-css");
+var plumber = require("gulp-plumber");
 var rename = require("gulp-rename");
 var sass = require("gulp-sass");
 
@@ -13,6 +14,7 @@ var paths =
 gulp.task("css", ["sass"], function()
 {
     return gulp.src(paths.css_files)
+        .pipe(plumber())
         .pipe(css())
         .pipe(rename(function(path)
         {
@@ -25,6 +27,7 @@ gulp.task("css", ["sass"], function()
 gulp.task("sass", function()
 {
     return gulp.src(paths.sass_files)
+        .pipe(plumber())
         .pipe(sass().on("error", sass.logError))
         .pipe(gulp.dest(paths.css))
 });
