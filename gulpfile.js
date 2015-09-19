@@ -11,30 +11,21 @@ var paths =
     css_files: "css/**/*.css"
 };
 
-gulp.task("css", ["sass"], function()
-{
-    return gulp.src(paths.css_files)
-        .pipe(plumber())
-        .pipe(css())
-        .pipe(rename(function(path)
-        {
-            if (path.basename.indexOf(".min") < 0)
-                path.basename += ".min";
-        }))
-        .pipe(gulp.dest(paths.css));
-});
-
-gulp.task("sass", function()
+gulp.task("css", function()
 {
     return gulp.src(paths.sass_files)
         .pipe(plumber())
+        // SASS compilation
         .pipe(sass().on("error", sass.logError))
         .pipe(gulp.dest(paths.css))
+        // CSS minification
+        .pipe(css())
+        .pipe(rename(function(path) { path.basename += ".min"; }))
+        .pipe(gulp.dest(paths.css));
 });
 
-gulp.task("sass:watch", function()
+gulp.task("default", ["css"])
 {
-    gulp.watch(paths.sass_files, ["sass", "css"]);
-});
-
-gulp.task("default", ["sass:watch", "sass", "css"]);
+    process.title = "Prime47 BUILD";
+    gulp.watch(paths.sass_files, ["css"]);
+}
