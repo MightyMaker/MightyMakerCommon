@@ -5,7 +5,7 @@
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "nodemon --exec gulp"
+    "build": "nodemon --exec gulp --ignore prime47/ --ignore source/"
   },
   "repository": {
     "type": "git",
