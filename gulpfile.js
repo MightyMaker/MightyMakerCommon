@@ -5,6 +5,7 @@ var css = require("gulp-css");
 var plumber = require("gulp-plumber");
 var rename = require("gulp-rename");
 var sass = require("gulp-sass");
+var webserver = require("gulp-webserver");
 
 var paths =
 {
@@ -31,7 +32,23 @@ gulp.task("css", function()
         .pipe(gulp.dest(paths.dest_css));
 });
 
-gulp.task("default", ["css"], function()
+gulp.task("webserver", function()
+{
+    return gulp.src(paths.dest)
+        .pipe(webserver(
+            {
+                directoryListing:
+                {
+                    enable: true,
+                    path: "prime47"
+                },
+                host: "0.0.0.0",
+                livereload: true,
+                port: 80
+            }));
+});
+
+gulp.task("default", ["css", "webserver"], function()
 {
     process.title = "Prime47 BUILD";
     gulp.watch(paths.src_css_files, ["css"]);
