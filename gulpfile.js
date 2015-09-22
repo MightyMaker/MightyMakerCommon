@@ -1,5 +1,6 @@
 var gulp = require("gulp");
 var autoprefixer = require("gulp-autoprefixer");
+var cached = require("gulp-cached");
 var css = require("gulp-css");
 var plumber = require("gulp-plumber");
 var rename = require("gulp-rename");
@@ -18,6 +19,7 @@ gulp.task("css", function()
         .pipe(plumber())
         // SASS compilation
         .pipe(sass().on("error", sass.logError))
+        .pipe(cached("sass:compiled"))
         // CSS prefixing
         .pipe(autoprefixer())
         .pipe(gulp.dest(paths.css))
