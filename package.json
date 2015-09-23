@@ -5,6 +5,7 @@
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "bower": "bower",
     "build": "nodemon --exec gulp --ignore prime47/ --ignore source/"
   },
   "repository": {
@@ -22,6 +23,7 @@
   },
   "homepage": "https://github.com/MightyMaker/MightyMakerPrime47",
   "devDependencies": {
+    "bower": "^1.5.2",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.0.1",
     "gulp-cached": "^1.1.0",

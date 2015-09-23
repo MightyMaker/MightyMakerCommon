@@ -1,0 +1,21 @@
+{
+  "name": "mightymaker-prime47",
+  "version": "0.0.0",
+  "homepage": "https://github.com/MightyMaker/MightyMakerPrime47",
+  "authors": [
+    "Riaan Pelser <riaanpelser@gmx.com>"
+  ],
+  "description": "MightyMaker website style assets.",
+  "keywords": [
+    "mightymaker",
+    "prime47"
+  ],
+  "license": "Private",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "source/packages"
+  ],
+  "dependencies": {
+  }
+}
